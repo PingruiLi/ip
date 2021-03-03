@@ -6,6 +6,9 @@ import task.TaskList;
 
 import java.util.Iterator;
 
+/**
+ * Represent a command of searching tasks that contain specified keywords
+ */
 public class FindCommand extends Command{
     private String keyword;
     private String feedbackFormat = "Here are the matching tasks in your list:";
@@ -14,6 +17,10 @@ public class FindCommand extends Command{
         this.keyword = keyword;
     }
 
+    /**
+     * search task list for tasks whose name contain the keyword
+     * @return feedback message and the list of tasks that contain the keyword
+     */
     @Override
     public CommandResult execute(){
         TaskList relevantTasks = new TaskList();
